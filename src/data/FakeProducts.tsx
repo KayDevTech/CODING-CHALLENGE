@@ -7,7 +7,7 @@ export const fakeProducts: product[] = [
     price: 999,
     description: "The latest iPhone with A15 Bionic chip.",
     category: "Smartphones",
-    image: "https://via.placeholder.com/150"
+    image: "https://images.app.goo.gl/BWAtafm8rocnbPTC9"
   },
   {
     id: 2,

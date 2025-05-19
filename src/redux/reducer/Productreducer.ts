@@ -14,6 +14,7 @@ const initialState: productState = {
 type Action =
     | { type: typeof ActionTypes.SET_PRODUCTS; payload: product[] }
     | { type: typeof ActionTypes.SELECTED_PRODUCT; payload: product }
+    | { type: typeof ActionTypes.REMOVE_SELECTED_PRODUCT }
 
 
 export const productRdeucer = (state: productState = initialState, action: Action) => {
@@ -35,7 +36,10 @@ export const selectedProductReducer = (state: productState = initialState, actio
                 ...state,
                 ...action.payload
             }
+        case ActionTypes.REMOVE_SELECTED_PRODUCT:
+                return {}
             default:
                 return state;
     }
 } 
+

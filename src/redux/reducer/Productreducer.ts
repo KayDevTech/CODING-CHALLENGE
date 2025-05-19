@@ -22,14 +22,20 @@ export const productRdeucer = (state: productState = initialState, action: Actio
             return {
                 ...state, 
                 products: action.payload
-            } 
-
-        case ActionTypes.SELECTED_PRODUCT:
-            return {
-                ...state, 
-                selectedProduct: action.payload
-            };
+            }
         default: 
             return state;   
     }
 }
+
+export const selectedProductReducer = (state: productState = initialState, action: Action) => {
+    switch(action.type){
+        case ActionTypes.SELECTED_PRODUCT:
+            return{
+                ...state,
+                ...action.payload
+            }
+            default:
+                return state;
+    }
+} 
